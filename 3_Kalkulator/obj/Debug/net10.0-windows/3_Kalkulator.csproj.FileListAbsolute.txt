@@ -1,0 +1,14 @@
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\bin\Debug\net10.0-windows\3_Kalkulator.exe
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\bin\Debug\net10.0-windows\3_Kalkulator.deps.json
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\bin\Debug\net10.0-windows\3_Kalkulator.runtimeconfig.json
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\bin\Debug\net10.0-windows\3_Kalkulator.dll
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\bin\Debug\net10.0-windows\3_Kalkulator.pdb
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.AssemblyInfoInputs.cache
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.AssemblyInfo.cs
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.csproj.CoreCompileInputs.cache
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.dll
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\refint\3_Kalkulator.dll
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.pdb
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\3_Kalkulator.genruntimeconfig.cache
+C:\Users\p\Documents\projects\PBKK\3_Kalkulator\obj\Debug\net10.0-windows\ref\3_Kalkulator.dll
