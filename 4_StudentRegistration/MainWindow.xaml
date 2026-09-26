@@ -1,0 +1,240 @@
+﻿<Window x:Class="StudentRegistration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Registration"
+        Height="760" Width="1250"
+        WindowStartupLocation="CenterScreen"
+        Background="#0B1026">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="Background" Value="#151B3D"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#5965D8"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+            <Setter Property="Background" Value="#151B3D"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#151B3D"/>
+            <Setter Property="Padding" Value="8,5"/>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Setter Property="Background" Value="#121735"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#5146A5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Background" Value="#121735"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#252B50"/>
+            <Setter Property="Padding" Value="8,5"/>
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="25">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#0B1026" Offset="0"/>
+                <GradientStop Color="#17134A" Offset="0.5"/>
+                <GradientStop Color="#24104A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="390"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- FORM -->
+        <Border Grid.Column="0" Padding="22" CornerRadius="18"
+                Background="#121735"
+                BorderBrush="#5965D8"
+                BorderThickness="1">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+
+                    <TextBlock Text="✦ STUDENT REGISTRATION"
+                               FontSize="25"
+                               FontWeight="Bold"
+                               Foreground="#8EE7FF"
+                               Margin="0,0,0,20"/>
+
+                    <TextBlock Text="NIM" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txtNIM"/>
+
+                    <TextBlock Text="Nama" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txtNama"/>
+
+                    <TextBlock Text="Program Studi" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbProdi">
+                        <ComboBoxItem Content="Teknik Informatika"/>
+                        <ComboBoxItem Content="Rekayasan Perangkat Lunak"/>
+                        <ComboBoxItem Content="Rekayasa Kecerdasan Artifisial"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Jenis Kelamin" FontWeight="SemiBold"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,12">
+                        <RadioButton x:Name="rbLaki"
+                                     Content="Laki-laki"
+                                     GroupName="Gender"
+                                     Foreground="White"
+                                     Margin="0,0,20,0"/>
+                        <RadioButton x:Name="rbPerempuan"
+                                     Content="Perempuan"
+                                     GroupName="Gender"
+                                     Foreground="White"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Tanggal Lahir" FontWeight="SemiBold"/>
+                    <DatePicker x:Name="dpTanggalLahir"/>
+
+                    <TextBlock Text="Alamat" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txtAlamat"
+                             Height="55"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"/>
+
+                    <TextBlock Text="No. Telepon" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txtTelepon"/>
+
+                    <!-- BUTTONS -->
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,8,0,0">
+
+                        <Button x:Name="btnSimpan"
+                                Content="SIMPAN"
+                                Width="75"
+                                Height="38"
+                                Background="#5B5FEF"
+                                Margin="0,0,7,0"
+                                Click="BtnSimpan_Click"/>
+
+                        <Button x:Name="btnEdit"
+                                Content="EDIT"
+                                Width="65"
+                                Height="38"
+                                Background="#8B5CF6"
+                                Margin="0,0,7,0"
+                                Click="BtnEdit_Click"/>
+
+                        <Button x:Name="btnHapus"
+                                Content="HAPUS"
+                                Width="70"
+                                Height="38"
+                                Background="#E34B7A"
+                                Margin="0,0,7,0"
+                                Click="BtnHapus_Click"/>
+
+                        <Button x:Name="btnReset"
+                                Content="RESET"
+                                Width="65"
+                                Height="38"
+                                Background="#374151"
+                                Click="BtnReset_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- DATA -->
+        <Border Grid.Column="2"
+                Padding="22"
+                CornerRadius="18"
+                Background="#121735"
+                BorderBrush="#5965D8"
+                BorderThickness="1">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Text="✦ DATA MAHASISWA"
+                           FontSize="25"
+                           FontWeight="Bold"
+                           Foreground="#8EE7FF"
+                           Margin="0,0,0,18"/>
+
+                <!-- SEARCH -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Text="Cari NIM:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox x:Name="txtSearch" Width="230" Height="34" Margin="0"/>
+                    <Button x:Name="btnSearch" Content="Cari" Width="75" Height="34" Margin="10,0,0,0" Background="#5B5FEF" Click="BtnCari_Click"/>
+                </StackPanel>
+
+                <!-- TABLE -->
+                <DataGrid x:Name="dataGridMahasiswa"
+                          Grid.Row="2"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionChanged="DataGridMahasiswa_SelectionChanged"
+                          Background="#0F1430"
+                          Foreground="White"
+                          BorderBrush="#5965D8"
+                          GridLinesVisibility="Horizontal"
+                          HeadersVisibility="Column">
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#29235C"/>
+                            <Setter Property="Foreground" Value="#8EE7FF"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Padding" Value="8"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="NIM" Binding="{Binding NIM}" Width="100"/>
+                        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}" Width="150"/>
+                        <DataGridTextColumn Header="Prodi" Binding="{Binding Prodi}" Width="150"/>
+                        <DataGridTextColumn Header="Gender" Binding="{Binding JenisKelamin}" Width="100"/>
+                        <DataGridTextColumn Header="Tanggal Lahir" Binding="{Binding TanggalLahir}" Width="110"/>
+                        <DataGridTextColumn Header="Telepon" Binding="{Binding NoTelepon}" Width="120"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
