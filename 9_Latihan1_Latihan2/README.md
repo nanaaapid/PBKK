@@ -42,7 +42,7 @@ Pada latihan kedua bagian A, saya mengembangkan aplikasi Sistem Informasi Akadem
 
 *Halaman autentikasi pengguna.*
 
-![Homepage SIAKAD](docs/latihan21/02-dashboard.png)
+![Homepage SIAKAD](docs/latihan2a/02-dashboard.png)
 
 *Tampilan halaman utama SIAKAD.*
 
