@@ -104,7 +104,7 @@ Untuk metode pembayaran, aplikasi menyediakan simulasi transfer bank dan Cash on
 
 ![Checkout](docs/latihan2b/05-checkout.png)
 
-*Fitur keranjang checkout.*
+*Fitur checkout.*
 
 ![Dashboard Admin Vaselle](docs/latihan2b/06-admin-dashboard.png)
 
